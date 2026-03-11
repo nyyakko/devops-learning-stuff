@@ -22,4 +22,9 @@ spec:
                 elif [[ $STATE -eq "0" ]]; then
                     echo "no" > /usr/share/nginx/html/grok
                 fi
-
+        preStop:
+          exec:
+            command:
+                - sh
+                - -c
+                - echo "he couldn't handle the truth!"
