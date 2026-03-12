@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: quiz-data
+  name: minikube-volume
 spec:
   capacity:
     storage: 1Gi
@@ -9,4 +9,4 @@ spec:
     - ReadWriteOnce
     - ReadOnlyMany
   hostPath:
-    path: /var/quiz-data
+    path: /var/minikube-volume

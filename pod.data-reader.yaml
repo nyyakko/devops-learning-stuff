@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  generateName: data-reader-
+spec:
+  volumes:
+    - name: generic-data
+      persistentVolumeClaim:
+        claimName: generic-data
+        readOnly: true
+  containers:
+    - name: writer
+      image: busybox
+      command:
+        - sh
+        - -c
+        - |
+          echo "The files in the persistent volume and their contents:" &
+          grep ^ /generic-data/*
+          sleep 9999
+      volumeMounts:
+        - name: generic-data
+          mountPath: /generic-data

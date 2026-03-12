@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  generateName: data-writer-
+spec:
+  volumes:
+    - name: generic-data
+      persistentVolumeClaim:
+        claimName: generic-data
+  containers:
+    - name: writer
+      image: busybox
+      command:
+        - sh
+        - -c
+        - |
+          echo "A writer pod wrote this." > /generic-data/${HOSTNAME} &
+          echo "I can write to /generic-data/${HOSTNAME}."
+          sleep 9999
+      volumeMounts:
+        - name: generic-data
+          mountPath: /generic-data
