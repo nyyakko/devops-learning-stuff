@@ -4,7 +4,7 @@ This repository is meant for me to keep track of my progress in learning DevOps
 from the ground up.
 
 > [!WARNING]
-> Since this repo is meant to evolve organically just like my own knowledge, do
+> Since this repo is meant to evolve organically just like my own knowledge,
 > some things in here might not make any sense structurally.
 
 ## Learning progress
