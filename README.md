@@ -1,13 +1,18 @@
 # Devops Learning Task
 
+This repository is meant for me to keep track of my progress in learning DevOps
+from the ground up. Do not expect this repository to make much sense
+structurally, because it is meant to evolve just as organically as my knowledge :^).
+
 ## Learning progress
 
-### Kubernetes
+### Kubernetes Fundamentals
 
-- [x] Introduction to kubernetes
-- [x] Understanding how a container works
+Everything I currently know about kubernetes.
+
+- [x] Understanding what is and how kubernetes works
 - [x] Deploying a simple application (without YAML manifest)
-- [x] Basic understanding of the Kubernetes API Objects
+- [x] Understanding what are Kubernetes API Objects
 - [x] Running workloads in pods
     - [x] Running an application by creating a pod from a YAML manifest
     - [x] Interacting with the application, viewing its logs, and exploring its environment
@@ -25,4 +30,3 @@
     - [x] How to share files between pods
     - [x] What are external volumes and its caveats
     - [x] What is a `hostPath` volume type and why it might never be a good idea
-- [-] Persistent Volumes
