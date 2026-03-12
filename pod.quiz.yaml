@@ -5,7 +5,8 @@ metadata:
 spec:
   volumes:
     - name: quiz-data
-      emptyDir: {}
+      persistentVolumeClaim:
+        claimName: quiz-data
     - name: initdb
       emptyDir: {}
   initContainers:
