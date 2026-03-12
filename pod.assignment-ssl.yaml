@@ -4,10 +4,21 @@ metadata:
   name: pltsci-assignment-ssl
 spec:
   initContainers:
-    - name: echo
-      image: nyyakko/pltsci-assignment-init-echo:latest
     - name: network-check
-      image: nyyakko/pltsci-assignment-init-ping:latest
+      image: busybox
+      command:
+        - sh
+        - -c
+        - |
+          IP=1.1.1.1
+
+          echo "Checking network connectivity to $IP"
+
+          if ping -c 1 $IP &> /dev/null; then
+              echo "Host seems to be reachable. Good."
+          else
+              echo "Host could not be reached. Bad."
+          fi
   containers:
     - name: app
       image: nyyakko/pltsci-assignment:latest
