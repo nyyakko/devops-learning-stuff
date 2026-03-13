@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: generic-volume-local-on-minikube-worker
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: local
+  capacity:
+    storage: 1Gi
+  local:
+    path: /mnt/ssd1
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+        - matchExpressions:
+          - key: kubernetes.io/hostname
+            operator: In
+            values:
+              - minikube
