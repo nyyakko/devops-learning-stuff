@@ -41,6 +41,7 @@ Everything I currently know about kubernetes.
             - [x] How to share files between pods
             - [x] Sharing volumes between pods
         - [x] Lifetime of a statically provisioned persistent volume
+        - [x] Local persistent volumes
     - [x] Dynamic Provisioning
         - [x] Storage Classes
         - [x] Dynamic Volume Expansion
