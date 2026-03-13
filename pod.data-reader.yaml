@@ -4,9 +4,9 @@ metadata:
   generateName: data-reader-
 spec:
   volumes:
-    - name: generic-data
+    - name: generic-data-static
       persistentVolumeClaim:
-        claimName: generic-data
+        claimName: generic-data-static
         readOnly: true
   containers:
     - name: writer
@@ -16,8 +16,8 @@ spec:
         - -c
         - |
           echo "The files in the persistent volume and their contents:" &
-          grep ^ /generic-data/*
+          grep ^ /generic-data-static/*
           sleep 9999
       volumeMounts:
         - name: generic-data
-          mountPath: /generic-data
+          mountPath: /generic-data-static

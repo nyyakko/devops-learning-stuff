@@ -6,7 +6,7 @@ spec:
   volumes:
     - name: quiz-data
       persistentVolumeClaim:
-        claimName: generic-data-default
+        claimName: generic-data-dynamic-default
     - name: initdb
       emptyDir: {}
   initContainers:

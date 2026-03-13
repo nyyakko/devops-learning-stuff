@@ -4,9 +4,9 @@ metadata:
   generateName: data-writer-
 spec:
   volumes:
-    - name: generic-data
+    - name: generic-data-static
       persistentVolumeClaim:
-        claimName: generic-data
+        claimName: generic-data-static
   containers:
     - name: writer
       image: busybox
@@ -14,9 +14,9 @@ spec:
         - sh
         - -c
         - |
-          echo "A writer pod wrote this." > /generic-data/${HOSTNAME} &
-          echo "I can write to /generic-data/${HOSTNAME}."
+          echo "A writer pod wrote this." > /generic-data-static/${HOSTNAME} &
+          echo "I can write to /generic-data-static/${HOSTNAME}."
           sleep 9999
       volumeMounts:
-        - name: generic-data
-          mountPath: /generic-data
+        - name: generic-data-static
+          mountPath: /generic-data-static

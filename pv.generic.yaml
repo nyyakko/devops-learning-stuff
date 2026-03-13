@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: minikube-volume
+  name: generic-volume
 spec:
   capacity:
     storage: 1Gi
@@ -9,4 +9,4 @@ spec:
     - ReadWriteOnce
     - ReadOnlyMany
   hostPath:
-    path: /var/minikube-volume
+    path: /var/generic-volume
