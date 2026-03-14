@@ -33,11 +33,14 @@ Everything I currently know about kubernetes.
         - Understanding what is a sidecar container
         - Understanding what are init containers
     - Lifetime
+        - Understanding about a pod's condition, phase and status
         - Inspecting the pod status
         - Probes
             - Liveness probe
             - Startup probe
-        - Understanding about a pod's condition, phase and status
+        - Lifecycle
+            - postStart
+            - preStop
 - Volumes
     - How to persist files across container restarts
     - How to share files between containers of the same pod

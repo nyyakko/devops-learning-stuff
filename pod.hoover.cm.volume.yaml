@@ -51,6 +51,19 @@ spec:
       ports:
         - name: http
           containerPort: 8080
+      volumeMounts:
+        - name: pod-meta
+          mountPath: /pod-meta
+      lifecycle:
+        postStart:
+          exec:
+            command:
+              - sh
+              - -c
+              - |
+                POD_NAME=$(cat /pod-meta/pod-name.txt)
+
+                echo "[$POD_NAME]: Hai hai 👋" > /proc/1/fd/1
       startupProbe:
         httpGet:
           path: /v1/health
