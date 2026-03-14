@@ -7,6 +7,10 @@ from the ground up.
 > Since this repo is meant to evolve organically just like my own knowledge,
 > some things in here might not make any sense structurally.
 
+> [!NOTE]
+> Yes I know about the cert and the private key. They are worthless, thou
+> shan't be worried.
+
 ## Learning progress
 
 ### Kubernetes Fundamentals
