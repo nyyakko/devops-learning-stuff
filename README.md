@@ -16,6 +16,11 @@ Everything I currently know about kubernetes.
 - Understanding what is and how kubernetes works
 - Simple application deployment (without YAML manifest)
 - Kubernetes API Objects
+    - Pod
+    - PersistentVolumeClaim (PVC)
+    - PersistentVolume (PV)
+    - StorageClass (SC)
+    - ConfigMap (CM)
 - Pods
     - Workloads
         - Running an application by creating a pod from a YAML manifest
@@ -52,3 +57,21 @@ Everything I currently know about kubernetes.
         - ConfigMap Volumes
         - Ceveats when updating ConfigMap files
     - Secrets
+
+### Observability
+
+Everything I currently know about system monitoring and observability.
+
+- Observability Basics
+    - Pillars of Observability
+        - Logs
+        - Traces
+        - Metrics
+    - What is system monitoring
+- Monitoring Tools
+    - Prometheus
+        - Basic node monitoring with node_exporter
+    - Grafana
+        - Visualizing metrics from Prometheus
+        - Consuming pre-built dashboards for K8S cluster monitoring
+
