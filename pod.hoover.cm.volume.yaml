@@ -18,21 +18,32 @@ spec:
             path: example-com.crt
           - key: tls.key
             path: example-com.key
+    - name: pod-meta
+      downwardAPI:
+        items:
+          - path: pod-name.txt
+            fieldRef:
+              fieldPath: metadata.name
   initContainers:
     - name: network-check
       image: busybox
+      volumeMounts:
+        - name: pod-meta
+          mountPath: /pod-meta
       command:
         - sh
         - -c
         - |
           IP=1.1.1.1
 
-          echo "Checking network connectivity to $IP"
+          POD_NAME=$(cat /pod-meta/pod-name.txt)
+
+          echo "[$POD_NAME]: Checking network connectivity to $IP"
 
           if ping -c 1 $IP &> /dev/null; then
-              echo "Host seems to be reachable. Good."
+            echo "[$POD_NAME]: Host seems to be reachable. Good."
           else
-              echo "Host could not be reached. Bad."
+            echo "[$POD_NAME]: Host could not be reached. Bad."
           fi
   containers:
     - name: app
