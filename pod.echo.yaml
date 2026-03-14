@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: echo
+spec:
+  restartPolicy: OnFailure
+  containers:
+    - name: echo
+      image: busybox
+      env:
+        - name: HELLO
+          value: Hello
+        - name: WORLD
+          valueFrom:
+            configMapKeyRef:
+              name: config
+              key: world
+              optional: false
+      command:
+        - sh
+        - -c
+        - echo "$HELLO, $WORLD"
