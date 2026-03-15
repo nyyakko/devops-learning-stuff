@@ -78,6 +78,10 @@ Everything I currently know about kubernetes.
             - Set based
     - Field selectors
     - Annotations
+- Services
+    - Pod networks are linked via a flat network
+    - Interacting with cluster-internal pods
+        - Resolving services with the internal dns server
 
 ### Observability
 
