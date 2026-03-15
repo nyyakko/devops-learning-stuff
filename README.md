@@ -77,6 +77,7 @@ Everything I currently know about kubernetes.
             - Equality based
             - Set based
     - Field selectors
+    - Annotations
 
 ### Observability
 
