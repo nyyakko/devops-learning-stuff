@@ -89,6 +89,7 @@ Everything I currently know about kubernetes.
     - The externalTrafficPolicy field
             - Makes it so an actual LoadBalancer is provisioned in the cluster
     - External services
+    - Headless services
 
 ### Observability
 
