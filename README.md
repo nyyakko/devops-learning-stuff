@@ -85,6 +85,8 @@ Everything I currently know about kubernetes.
     - Service Types
         - ClusterIP
         - NodePort
+        - LoadBalancer
+            - Makes it so an actual LoadBalancer is provisioned in the cluster
 
 ### Observability
 
