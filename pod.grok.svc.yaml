@@ -29,6 +29,15 @@ spec:
           valueFrom:
             fieldRef:
               fieldPath: metadata.name
+      readinessProbe:
+        successThreshold: 3
+        periodSeconds: 2
+        failureThreshold: 1
+        timeoutSeconds: 1
+        exec:
+          command:
+            - ls
+            - /var/ready
       command:
         - sh
         - -c

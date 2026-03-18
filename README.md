@@ -96,6 +96,7 @@ Everything I currently know about kubernetes.
     - Headless services
     - The internalTrafficPolicy field
     - Topology-aware routing
+    - Readiness probes
 
 ### Observability
 
