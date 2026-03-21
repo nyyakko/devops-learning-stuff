@@ -116,6 +116,18 @@ Everything I currently know about kubernetes.
         - Pods whose containers continously crash or fail their probes are
           never deleted automatically
     - Debugging a pod controller by a ReplicaSets
+- Deployments
+    - Why use a Deploment?
+    - Updating a deployment
+        - Deployment strategies
+            - Recreate
+            - RollingUpdate
+            - Canary
+            - A/B Testing
+            - Blue/Green
+            - Shadowing
+        - Pausing the update
+    - Availability
 
 ### Observability
 
