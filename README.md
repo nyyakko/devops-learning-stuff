@@ -112,6 +112,10 @@ Everything I currently know about kubernetes.
     - Why use a ReplicaSet?
     - The caveats of using ReplicaSets directly
     - Scaling ReplicaSets
+    - The reconciliation loop
+        - Pods whose containers continously crash or fail their probes are
+          never deleted automatically
+    - Debugging a pod controller by a ReplicaSets
 
 ### Observability
 
