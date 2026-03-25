@@ -146,3 +146,19 @@ Everything I currently know about system monitoring and observability.
         - Visualizing metrics from Prometheus
         - Consuming pre-built dashboards for K8S cluster monitoring
 
+
+### AWS
+
+Everything I currently know about cloud computing on AWS.
+
+- What is the cloud
+    - What is cloud computing
+    - Why do we need cloud computing
+    - Terms
+        - Region
+        - Availability Zone
+        - Scalability
+        - Elasticity
+- IAM
+    - Roles
+    - Policies
