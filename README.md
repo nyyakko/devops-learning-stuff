@@ -162,3 +162,39 @@ Everything I currently know about cloud computing on AWS.
 - IAM
     - Roles
     - Policies
+- EC2
+    - Basics
+        - How to create a simple instance
+        - Connecting through SSH
+    - Security Groups
+    - Instance Types
+        - General Purpose
+        - Compute Optimized
+        - Storage Optimized
+        - Memory Optimized
+        - HPC Optimized
+    - Purchasing Options
+        - On-Demand
+        - Reserved (Depecrated in favor of Savings Plan)
+        - Spot Instances
+        - Dedicated Hosts
+        - Dedicated Instances
+    - Networking
+        - Elastic vs Public vs Private IP
+        - Elastic Network Interface (ENI)
+    - Placement Groups
+        - Cluster
+            - Caveats to consider when using a Cluster PG
+        - Spread
+        - Partition
+    - Amazon Machine Image (AMI)
+    - Storing Data
+        - Encryption
+        - Snapshots
+        - Multi Attach
+        - Volume Types
+            - General Purpose (gp)
+            - Provisioned IOPS (io)
+            - Cold HDD (sc)
+            - Throughput Optimized HDD (st)
+        - EFS vs EBS
